@@ -1,19 +1,39 @@
-# :earth_americas: GDP dashboard template
+# GDP Atlas
 
-A simple Streamlit app showing the GDP of different countries in the world.
+GDP Atlas is an interactive Streamlit dashboard for comparing the scale and
+trajectory of economies using World Bank GDP data.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://gdp-dashboard-template.streamlit.app/)
+## Highlights
 
-### How to run it on your own machine
+- Compare up to eight economies across any year range from 1960 to 2022.
+- Search using full economy names or three-letter codes.
+- Explore combined GDP, coverage, growth, rankings, and individual trends.
+- Inspect exact values through interactive chart tooltips and a comparison table.
+- Switch between purpose-built light and dark themes.
+- See missing observations clearly without interpolation.
 
-1. Install the requirements
+## Run locally
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
 
-2. Run the app
+On macOS or Linux, activate the environment with `source .venv/bin/activate`.
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+## Data source
+
+The included dataset uses the World Bank indicator
+[`NY.GDP.MKTP.CD`](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD), GDP
+in current US dollars. It contains countries, territories, and World Bank
+aggregate groups, with some missing annual observations.
+
+## Contributors
+
+- [Mukund](https://github.com/mukundfeb) — original project and baseline implementation
+- [Rishikesh Sanin](https://github.com/Rishikeshsanin) — GDP Atlas redesign
+
+This project is based on Streamlit's GDP dashboard template and retains its
+Apache 2.0 license.
